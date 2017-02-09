@@ -1,0 +1,11 @@
+---
+- hosts: prk
+  remote_user: root
+
+  tasks:
+  - name: playing another yaml file
+    debug: msg={{ AppName }}
+    shell: touch app1
+    when: AppName is defined and AppName == "app" 
+    
+
